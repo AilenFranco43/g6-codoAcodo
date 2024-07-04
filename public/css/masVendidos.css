@@ -1,0 +1,91 @@
+.products {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 10px;
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+.products h2 {
+    font-family: "Dosis", sans-serif;
+    font-size: large;
+    text-align: center;
+    margin: 0px auto 15px auto;
+}
+
+.carousel {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel-images img {
+    max-width: 270px;
+    height: 270px;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: #86664f;
+    opacity: .6;
+    color: #fbfbfb;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.product-description,
+.buy-button {
+    margin-top: 10px;
+}
+
+.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #D0DDC1;
+    color: #544036;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    .products h2 {
+        font-size: x-large;
+        margin: 0px auto 20px auto;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    .products h2 {
+        font-size: xx-large;
+        margin: 0px auto 25px auto;
+    }
+
+    .carousel-images img {
+        max-width: 500px;
+        max-height: 500px;
+    }
+}

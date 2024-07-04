@@ -1,0 +1,31 @@
+#banner{
+    position: static;
+    margin: 0;
+
+}
+
+#banner img {
+    width: 100%;
+    height: auto;
+    
+}
+
+/* Tablet */
+@media  screen and (min-width: 768px) {
+    #banner{
+        background-image: url('../src/img/Banner_Web_GreenHeart.png') ;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        /* height: 320px; */
+    }
+    #banner img{
+        visibility: hidden;
+    }
+}
+
+/* Desktop */
+@media  screen and (min-width: 1024px) {
+    #banner{
+        height: 470px;
+    }
+}

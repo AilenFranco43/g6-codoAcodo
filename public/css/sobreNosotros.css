@@ -1,0 +1,49 @@
+/* --------------------mobile version-------------------- */
+#sobreNosotros {
+    width: 100%;
+    height: auto;
+    background: #fbfbfb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: .5em 0 0 0;
+}
+.sobreNosotros-title {
+    background: #93a267;
+    width: 100%;
+    padding: .2em 0;
+
+    text-align: center;
+}
+.sobreNosotros-title h2 {
+    font-size: 1.6em;
+    font-weight: 100;
+    color: #fbfbfb;
+}
+.sobreNosotros-text {
+    padding: 1.2em 2.5em;
+}
+.sobreNosotros-text p {
+    font-size: 1.2em;
+    margin: 0 0 1em 0;
+    text-align: end;
+}
+.sobreNosotros-text p span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #93a267;
+}
+
+/* --------------------responsive version escritorio-------------------- */
+
+@media (min-width: 768px) {
+    .sobreNosotros-text {
+        width: 700px;
+    }
+    .sobreNosotros-text p {
+        font-size: 1.3em;
+        letter-spacing: 1px;
+    }
+}
