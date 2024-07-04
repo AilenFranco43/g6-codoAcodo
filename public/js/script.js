@@ -49,3 +49,18 @@ function moveSlide(n) {
             });
         });
     });
+
+//login
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    if (email === 'test@example.com' && password === 'password123') {
+        alert('Inicio de sesión exitoso');
+        $('#loginModal').modal('hide'); // Cerrar modal al iniciar sesión exitosamente
+    } else {
+        alert('Correo electrónico o contraseña incorrectos');
+    }
+});
