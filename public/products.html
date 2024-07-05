@@ -8,6 +8,7 @@
   <title>GreenHeart</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/login.css">
   <link rel="stylesheet" href="./css/products.css">
   <link rel="stylesheet" href="./css/footer.css">
 
@@ -60,6 +61,37 @@
   </header>
 
   <main class="main">
+
+
+    <button class="login-btn" id="openModalBtn">Iniciar Sesión</button>
+
+    <!-- Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar Sesión</h5>
+                    <button type="button" class="close" id="closeModalBtn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" class="form-control" id="login-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Contraseña</label>
+                            <input type="password" class="form-control" id="login-password" required>
+                        </div>
+                        <button type="submit" class="btn">Entrar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="cart">
 
@@ -211,6 +243,7 @@
     </div>
   </footer>
   <script src="./js/script.js"></script>
+  <script src="./js/login.js"></script>
 </body>
 
 </html>

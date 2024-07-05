@@ -20,8 +20,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
   <!-- Iconos -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
@@ -65,44 +65,41 @@
         </div>
     </div>
   </header>
-     <!-- Banner -->
-     <div class="banner">
-      <div class="container h-100 d-flex justify-content-center align-items-center">
-          <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">Iniciar Sesión</button>
-      </div>
-  </div>
 
-  <!-- Login Modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body">
-                  <form id="loginForm">
-                      <div class="form-group">
-                          <label for="email">Correo electrónico</label>
-                          <input type="email" class="form-control" id="email" required>
-                      </div>
-                      <div class="form-group">
-                          <label for="password">Contraseña</label>
-                          <input type="password" class="form-control" id="password" required>
-                      </div>
-                      <button type="submit" class="btn btn-primary btn-block">Entrar</button>
-                  </form>
-              </div>
-              <div class="modal-footer">
-                  <a href="#">¿Olvidaste tu contraseña?</a>
-              </div>
-          </div>
-      </div>
-  </div>
 
   <div id="cuerpo">
+
+
+    <button class="login-btn" id="openModalBtn">Iniciar Sesión</button>
+
+    <!-- Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar Sesión</h5>
+                    <button type="button" class="close" id="closeModalBtn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" class="form-control" id="login-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Contraseña</label>
+                            <input type="password" class="form-control" id="login-password" required>
+                        </div>
+                        <button type="submit" class="btn">Entrar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section id="banner">
       <img src="./src/img/Banner_Mobile_GreenHeart.png" alt="Banner con una imagen de los productos">
     </section>
@@ -275,11 +272,12 @@
   </footer>
   <script src="./js/script.js"></script>
   <script src="./js/form.js"></script>
+  <script src="./js/login.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
 
 
 </body>
