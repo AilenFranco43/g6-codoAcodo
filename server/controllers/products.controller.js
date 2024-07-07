@@ -1,5 +1,10 @@
 const db = require('../db/db');
 
+
+
+
+
+
 const index = (req, res) => {
     const sql = "SELECT * FROM products";
 
@@ -14,7 +19,6 @@ const index = (req, res) => {
 
 const show = (req, res) => {
     const {id} = req.params;
-
      const sql = 'SELECT * FROM products WHERE product_id = ?';
     db.query(sql, [id], (error, rows) => {
         if(error){
@@ -26,8 +30,6 @@ const show = (req, res) => {
         
         res.json(rows[0]);
     });
-
-    
 }
 
 
@@ -42,8 +44,43 @@ const store = (req, res) => {
     });
 };
 
+const update = (req, res) => {
+    const {id} = req.params;
+    const {description, price, stock, category_id, img_url} = req.body;
+    const sql  = "UPDATE products SET description = ?, price = ?, stock = ?, category_id = ?, img_url = ? WHERE product_id = ?";
+
+    db.query(sql, [description, price, stock, category_id, img_url, id], (error, result) => {
+        if(error){
+            return res.status(500).json({error:"Intente más tarde"});
+
+        }
+        if(result.affectedRows === 0){
+            return res.status(404).json({error: "No existe el producto"});
+        }
+        res.json({message:"Producto actualizado exitosamente"});
+    });
+}
+
+
+
+const destroy = (req, res) => {
+    const { id } = req.params;
+    const sql = "DELETE FROM products WHERE product_id = ?";
+    db.query(sql, [id], (error, result) => {
+        if (error) {
+            return res.status(500).json({ error: "Intente más tarde" });
+        }
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ error: "No existe el producto" });
+        }
+        res.json({ message: "Producto eliminado exitosamente" });
+    });
+};
+
 module.exports = {
     index,
     show,
     store,
+    update,
+    destroy,
 };

@@ -2,12 +2,17 @@
 const express = require("express"); 
 const path = require("path");
 const app = express(); 
+app.use(express.json());
 
 
 app.use(express.json());
 
 const productsRouter = require("./routes/products.router");
+
+
 app.use("/products", productsRouter); 
+
+
 
 
 app.use(
