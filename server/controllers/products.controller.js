@@ -1,5 +1,10 @@
 const db = require('../db/db');
 
+
+
+
+
+
 const index = (req, res) => {
     const sql = "SELECT * FROM products";
 
