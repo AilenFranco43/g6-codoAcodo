@@ -27,3 +27,10 @@ GreenHeart es una plataforma en línea donde los usuarios pueden explorar y comp
 **Matias Miranda**
 
 **Victoria Gonzalez Bonorino**
+
+## Backend
+
+**Matias Miranda**
+
+**Ailén Franco** 
+
