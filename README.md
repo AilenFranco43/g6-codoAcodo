@@ -19,10 +19,6 @@ GreenHeart es una plataforma en línea donde los usuarios pueden explorar y comp
 - **CSS3**: Para el diseño y la disposición visual.
 - **JavaScript**: Para la interactividad y la funcionalidad dinámica.
 
-## Dónde visitarnos
-
-https://vickygbonorino.github.io/g6-codoAcodo/
-
 
 ## Realizado por
 
